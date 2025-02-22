@@ -46,7 +46,7 @@ export function FAQ() {
       <h2 className="text-5xl font-bold text-center text-white font-['Roboto'] mb-10">
         Frequently Asked Questions
       </h2>
-      <div className="max-w-3xl mx-auto space-y-4">
+      <div className="max-w-screen mx-auto space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}

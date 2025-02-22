@@ -50,7 +50,7 @@ const Footer = () => {
             <p className="px-1 text-gray-400 md:w-2/3">
               The first-ever website experience platform that lets you create, 
               manage and optimize your token creation and manage everything about it. 
-              <br />
+              <br /><br />
               BEST RESPONSE OUT OF ALL TOKEN CREATION TOOLS.
             </p>
           </div>
