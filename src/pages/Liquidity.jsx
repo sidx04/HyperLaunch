@@ -2,10 +2,10 @@ import React from 'react'
 
 const Liquidity = () => {
   return (
-  <div className='pt-24 bg-black text-white md:pt-28 pb-10 '>
+  <div className="pt-24 bg-black text-white md:pt-28 pb-10 font-['Product Sans']">
     <div className="flex flex-col items-center rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 w-full max-w-6xl mx-auto">
-    <h1 className="text-4xl md:text-6xl font-semibold text-center uppercase">Create Solana Liquidity Pool</h1>
-    <p className="text-lg md:text-2xl text-gray-400 text-center mt-4">Easily create a Liquidity Pool for any Solana Token with ease.</p>
+    <h1 className="text-3xl md:text-5xl font-semibold text-center uppercase">Create Solana Liquidity Pool</h1>
+    <p className="text-md md:text-xl text-gray-400 text-center mt-4">Easily create a Liquidity Pool for any Solana Token with ease.</p>
 
     <div className="bg-[#232323] w-full p-6 md:p-10 rounded-[30px] mt-6">
       <h2 className="text-2xl md:text-3xl font-semibold">Create Liquidity Pool</h2>
@@ -40,7 +40,7 @@ const Liquidity = () => {
         {/* <p className="text-md">Total Fees: <span className="text-[#83f8ff]">0.2 SOL</span></p> */}
       </div>
 
-      <div className='relative grid  justify-items-center'>
+      <div className='relative justify-items-center'>
       <button className=" hover:bg-[#83f8ff]/20 text-[#83f8ff] mt-6 w-full md:w-auto px-6 py-3 bg-[#383838] rounded-full border border-[#83f8ff] flex items-center justify-center gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
         Create Liquidity Pool
       </button>

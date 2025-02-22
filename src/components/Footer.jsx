@@ -18,9 +18,9 @@ const Footer = () => {
           title: 'Socials',
           links: [
             { name: 'Discord', href: 'https://discord.gg/4ZfrhXuTxP' },
-            { name: 'Twitter', href: 'https://twitter.com' },
-            { name: 'Instagram', href: 'https://instagram.com' },
-            { name: 'Youtube', href: 'https://youtube.com' }
+            { name: 'Twitter', href: 'https://x.com/HyprLaunch' },
+            { name: 'Instagram', href: 'https://www.instagram.com/hyprlaunch/' },
+            { name: 'Youtube', href: 'https://www.youtube.com/@HyprLaunch' }
           ]
         },
       };
@@ -28,9 +28,9 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: <FaDiscord />, href: 'https://discord.gg/4ZfrhXuTxP' },
-    { icon: <FaTwitter />, href: 'https://twitter.com' },
-    { icon: <FaInstagram />, href: 'https://instagram.com' },
-    { icon: <FaYoutube />, href: 'https://youtube.com' }
+    { icon: <FaTwitter />, href: 'https://x.com/HyprLaunch' },
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/hyprlaunch/' },
+    { icon: <FaYoutube />, href: 'https://www.youtube.com/@HyprLaunch' }
   ];
 
   return (
