@@ -31,14 +31,14 @@ const Create = () => {
   const [checkMint, setMint] = useState(false);
 
   const handleMintChange = () => {
-    setFreeze(!checkMint);
+    setMint(!checkMint);
     alert("Checkbox is Mint " + !checkMint);
   };
 
   const [checkRevoke, setRevoke] = useState(false);
 
   const handleRevokeChange = () => {
-    setFreeze(!checkRevoke);
+    setRevoke(!checkRevoke);
     alert("Checkbox is " + !checkRevoke);
   };
   
