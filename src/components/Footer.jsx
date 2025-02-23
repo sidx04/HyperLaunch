@@ -3,6 +3,9 @@ import { Link } from 'react-router';
 import { FaDiscord, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling to top
+  };
 
     const footerLinks = {
         product: {
@@ -65,6 +68,7 @@ const Footer = () => {
                     {section.links.map((link) => (
                       <li key={link.name}>
                         <Link 
+                          onClick={scrollToTop}
                           to={link.href}
                           className="text-gray-400 hover:text-white transition-colors"
                         >

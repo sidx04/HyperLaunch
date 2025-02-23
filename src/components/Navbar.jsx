@@ -13,6 +13,10 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling to top
+  };
+
   
 
   return (
@@ -24,7 +28,7 @@ const NavBar = () => {
 
           {/* logo */}
           <div>
-            <Link to="/" className="flex items-center text-xl font-bold">
+            <Link to="/" onClick={scrollToTop} className="flex items-center text-xl font-bold">
               <img className='w-10 h-10' src="./hyprlaunch.svg" alt="HyprLaunch" />
               <span className="ml-3">HyprLaunch</span>
             </Link>
@@ -35,10 +39,10 @@ const NavBar = () => {
 
           {/* menu */}
           <div className='hidden lg:flex space-x-4 justify-start items-center gap-20 font-semibold'>
-          <Link to="/" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Home</span></Link>
-            <Link to="/createToken" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Create Token</span></Link>
-            <Link  to="/createLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Liquidity Pool</span></Link>
-            <Link to="/manageLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Manage Liquidity</span></Link>
+          <Link onClick={scrollToTop} to="/" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Home</span></Link>
+            <Link onClick={scrollToTop} to="/createToken" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Create Token</span></Link>
+            <Link onClick={scrollToTop} to="/createLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Liquidity Pool</span></Link>
+            <Link onClick={scrollToTop} to="/manageLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Manage Liquidity</span></Link>
           </div>
 
 
