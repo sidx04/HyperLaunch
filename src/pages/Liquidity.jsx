@@ -2,7 +2,7 @@ import React from 'react'
 
 const Liquidity = () => {
   return (
-  <div className="pt-24 bg-black text-white md:pt-28 pb-10 font-['Product Sans']">
+  <div className="pt-24 bg-black text-white md:pt-28 pb-10 z-10 font-['Product Sans']">
     <div className="flex flex-col items-center rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 w-full max-w-6xl mx-auto">
     <h1 className="text-3xl md:text-5xl font-semibold text-center uppercase">Create Solana Liquidity Pool</h1>
     <p className="text-md md:text-xl text-gray-400 text-center mt-4">Easily create a Liquidity Pool for any Solana Token with ease.</p>
@@ -64,21 +64,27 @@ const Liquidity = () => {
       How to use Create Liquidity Pool
     </p>
 
+    <div className="relative flex flex-col md:flex-row overflow-hidden items-center justify-between z-5 min-h-screen bg-black ">
+  
+      <img 
+        src="./leftsystem.svg" 
+        alt="Logo" 
+        className="hidden md:block relative bottom-90 w-[70%] lg:w-[60%] h-auto mt-6 md:mt-0"
+      />
 
-    <div className='flex flex-col items-center rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 mx-auto w-fit h-fit'>
-      <ol className="list-decimal space-y-3 pl-5 text-xl text-white font-['Product Sans'] leading-relaxed font-normal">
-                          
-        <li>Connect your Solana wallet.</li>
-        <li>Select the Token pair.</li>
-        <li>Set Starting Price.</li>
-        <li>Set Minimum Token Quantity that users can buy.</li>
-        <li>Set the minimum price change in SOL or USDC.</li>
-        <li>Set how much Liquidity you want to add.</li>
-        <li>Click on create Liquidity Pool and accept the transaction.</li>
-      </ol>
+  <div className="relative md:right-70 md:bottom-60 z-10 bg-[#232323] p-6 md:p-8 opacity-90 rounded-[20px] border border-[#343434] text-white shadow-xl max-w-lg w-full md:w-1/2 overflow-y-auto max-h-[80vh]">
+    <ol className="list-decimal space-y-3 pl-5 text-xl font-['Product Sans'] leading-relaxed">
+      <li>Connect your Solana wallet.</li>
+      <li>Select the Token pair.</li>
+      <li>Set Starting Price.</li>
+      <li>Set Minimum Token Quantity that users can buy.</li>
+      <li>Set the minimum price change in SOL or USDC.</li>
+      <li>Set how much Liquidity you want to add.</li>
+      <li>Click on create Liquidity Pool and accept the transaction.</li>
+    </ol>
+  </div>
 
-    </div>
-    <img src="./leftsystem.svg" alt="" />
+</div>
 
   </div>
   )
