@@ -4,7 +4,7 @@ import { FaDiscord, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling to top
+    window.scrollTo({ top: 0, behavior: "auto" }); // Smooth scrolling to top
   };
 
     const footerLinks = {
