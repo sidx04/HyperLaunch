@@ -1,8 +1,9 @@
+import { div, span } from 'framer-motion/client'
 import React from 'react'
 
 const Liquidity = () => {
   return (
-  <div className="pt-24 bg-black text-white md:pt-28 pb-10 z-10 font-['Product Sans']">
+  <div className="pt-28 bg-black text-white relative font-['Product Sans']">
     <div className="flex flex-col items-center rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 w-full max-w-6xl mx-auto">
     <h1 className="text-3xl md:text-5xl font-semibold text-center uppercase">Create Solana Liquidity Pool</h1>
     <p className="text-md md:text-xl text-gray-400 text-center mt-4">Easily create a Liquidity Pool for any Solana Token with ease.</p>
@@ -25,12 +26,13 @@ const Liquidity = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div className="flex flex-col">
           <label className="text-lg">Add Liquidity</label>
-          <input type="text" placeholder="1" className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
+          <input type="text" placeholder="1 Base" className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
           <label className="text-md text-[#7d7d7d]">Balance: <span>0</span></label>
         </div>
         <div className="flex flex-col">
           <label className="text-lg text-[#232323]"> FU </label>
-          <input type="text" placeholder="1" className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
+          <input type="text" placeholder="1 Qoute"
+          className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
           <label className="text-md text-[#7d7d7d]">Balance: <span>0</span></label>
         </div>
       </div>
@@ -47,7 +49,7 @@ const Liquidity = () => {
       <br />
       <p>
         <span>Adding to Liquidity Pool: </span>
-        <span> </span>
+        <span>0 </span><span>Base + </span><span>0</span><span> Quote</span>
       </p>
 
       <p>
@@ -60,11 +62,11 @@ const Liquidity = () => {
     </div>
     </div>
 
-    <p className="text-4xl md:text-6xl font-semibold text-center uppercase pt-20 pb-10">
+    <p className="text-4xl md:text-6xl font-semibold text-center uppercase pt-20 mb-20">
       How to use Create Liquidity Pool
     </p>
 
-    <div className="relative flex flex-col md:flex-row overflow-hidden items-center justify-between z-5 min-h-screen bg-black ">
+    <div className="relative flex flex-col md:flex-row items-center z-5 overflow-hidden justify-between min-h-screen bg-black py-5">
   
       <img 
         src="./leftsystem.svg" 

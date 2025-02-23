@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Create from './pages/Create'
 import Manage from './pages/Manage'
 import Liquidity from './pages/Liquidity'
+import { FAQ } from './components/Faq'
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path="/createLiquidity" element={<Liquidity />} />
         <Route path="/manageLiquidity" element={<Manage />} />
      </Routes>
+     <FAQ />
      <Footer />
     </>
     

@@ -8,7 +8,7 @@ const Manage = () => {
     const [active, setActive] = useState("A");
 
   return (
-    <div className="pt-24 bg-black text-white md:pt-28 font-['Product Sans']">
+    <div className="pt-28 bg-black text-white relative font-['Product Sans']">
         
         <div className="flex flex-col items-center rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 w-full max-w-6xl mx-auto">
             <h1 className="text-3xl md:text-5xl font-semibold text-center pb-5 uppercase">Manage Liquidity   </h1>
@@ -96,17 +96,17 @@ const Manage = () => {
             </div>
         </div>
         
-        <p className="text-4xl md:text-6xl font-semibold text-center uppercase pt-20 pb-10">
+        <p className="text-4xl md:text-6xl font-semibold text-center uppercase pt-20 pb-10 z-10">
             HOW TO MANAGE SOLANA TOKEN LIQUIDITY
         </p>
   
-        <div className="relative flex flex-col md:flex-row overflow-hidden items-center justify-between z-5 min-h-screen bg-black ">
+        <div className="flex flex-col md:flex-row items-center overflow-hidden justify-between min-h-screen bg-black">
             <img 
             src="./leftsystem.svg" 
             alt="Logo" 
             className="hidden md:block relative bottom-90 w-[70%] lg:w-[60%] h-auto mt-6 md:mt-0"
             />
-            <div className="relative md:right-70 md:bottom-60 z-10 bg-[#232323] p-6 md:p-8 opacity-90 rounded-[20px] border border-[#343434] text-white shadow-xl max-w-lg w-full md:w-1/2 overflow-y-auto max-h-[80vh]">
+            <div className="relative md:right-60 md:bottom-50 bg-[#232323] p-6 md:p-8 opacity-90 rounded-[20px] border border-[#343434] text-white shadow-xl max-w-lg w-full md:w-1/2 overflow-y-auto max-h-[80vh]">
                 <ol className="list-decimal space-y-3 pl-5 text-xl font-['Product Sans'] leading-relaxed">
                     <li>Connect your Solana wallet.</li>
                     <li>Enter the Liquidity Pool Address (AMM ID)</li>
