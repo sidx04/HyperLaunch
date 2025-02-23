@@ -44,7 +44,7 @@ const Create = () => {
   
   return (
     <div className="pt-28 bg-black text-white relative font-['Product Sans']">
-      <div className="flex flex-col rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 w-auto max-w-6xl mx-auto relative">
+      <div className="flex flex-col rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-8 w-auto xl:mx-auto max-w-6xl mx-3 relative">
         <h1 className="text-3xl md:text-5xl font-semibold text-center uppercase">Create Solana Token</h1>
         <p className="text-md md:text-xl text-gray-400 text-center mt-4">Easily Create your own Solana SPL Token in just 7+1 steps without Coding.</p>
         <div className='items-center flex-col flex justify-between'>

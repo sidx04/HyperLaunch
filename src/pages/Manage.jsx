@@ -10,7 +10,7 @@ const Manage = () => {
   return (
     <div className="pt-28 bg-black text-white relative font-['Product Sans']">
         
-        <div className="flex flex-col items-center rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-10 w-full max-w-6xl mx-auto">
+        <div className="flex flex-col rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-8 w-auto xl:mx-auto max-w-6xl mx-3 relative">
             <h1 className="text-3xl md:text-5xl font-semibold text-center pb-5 uppercase">Manage Liquidity   </h1>
             <div className="bg-[#232323] w-full p-6 md:p-10 rounded-[30px] mt-6">
                 <div className="justify-center items-center flex">
@@ -96,11 +96,11 @@ const Manage = () => {
             </div>
         </div>
         
-        <p className="text-4xl md:text-6xl font-semibold text-center uppercase pt-20 pb-10 z-10">
+        <p className="text-4xl md:text-6xl font-semibold text-center uppercase pt-20 pb-30 z-10">
             HOW TO MANAGE SOLANA TOKEN LIQUIDITY
         </p>
   
-        <div className="flex flex-col md:flex-row items-center overflow-hidden justify-between min-h-screen bg-black">
+        <div className="flex flex-col md:flex-row items-center overflow-hidden justify-between sm:h-auto sm:pb-10 md:pb-0 bg-black">
             <img 
             src="./leftsystem.svg" 
             alt="Logo" 

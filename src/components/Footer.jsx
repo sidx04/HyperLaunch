@@ -60,7 +60,7 @@ const Footer = () => {
 
           {/* Right side with links grid */}
           <div className="md:w-2/3">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+            <div className="grid grid-cols-2 gap-8 items-stretch">
               {Object.values(footerLinks).map((section) => (
                 <div key={section.title}>
                   <h3 className="text-lg font-semibold mb-4">{section.title}</h3>

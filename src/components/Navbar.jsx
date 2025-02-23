@@ -38,7 +38,7 @@ const NavBar = () => {
 
 
           {/* menu */}
-          <div className='hidden lg:flex space-x-4 justify-start items-center gap-20 font-semibold'>
+          <div className='hidden mx-8 lg:flex space-x-3 justify-start items-center gap-20 font-semibold'>
           <Link onClick={scrollToTop} to="/" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Home</span></Link>
             <Link onClick={scrollToTop} to="/createToken" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Create Token</span></Link>
             <Link onClick={scrollToTop} to="/createLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Liquidity Pool</span></Link>

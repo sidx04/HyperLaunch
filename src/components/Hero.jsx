@@ -3,41 +3,83 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="pt-20 bg-black text-white relative">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 flex flex-col items-center relative min-h-screen overflow-hidden">
-      <div className="relative flex flex-col items-center text-center w-full">
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white font-bold font-['Roboto'] uppercase 
-          text-[10vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] tracking-widest leading-none max-w-full whitespace-nowrap 
-          min-w-[280px]">
-          HYPRLAUNCH
-        </h1>
-        <img
-          src="./hyprlaunch.svg"
-          alt="HyprLaunch Logo"
-          className="w-48 sm:w-64 md:w-80 lg:w-96 opacity-65"
-        />
-      </div>
+    <div className="sm:pt-10 bg-black text-white relative">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center h-screen">
+        <div className="relative flex flex-col lg:flex-row items-center justify-center lg:gap-4 w-full">
+          <div className="relative order-1 mb-8 lg:mb-0">
+            <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white font-bold font-['Roboto'] uppercase 
+              text-[10vw] md:text-[9vw] tracking-widest leading-none whitespace-nowrap">
+              HYPRLAUNCH
+            </h1>
+            <img
+              src="./hyprlaunch.svg"
+              alt="HyprLaunch Logo"
+              className="w-64 md:w-80 lg:w-96 opacity-65"
+            />
+          </div>
 
-      <div className="absolute top-[50%] sm:top-[45%] sm:left-[40%] left-1/2 transform -translate-x-1/2 text-center sm:text-left max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl w-full px-4 sm:px-0">
-        <p className="text-sm sm:text-base md:text-lg font-normal leading-snug text-white">
-          Launch Tokens & Create Liquidity Pools effortlessly! <br /> No coding required.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center sm:justify-start">
-          <Link to="/createToken">
-            <button className="px-6 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white font-bold w-full sm:w-auto">
-              Create Token
-            </button>
-          </Link>
-          <Link to="/createLiquidity">
-            <button className="px-6 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white font-bold w-full sm:w-auto">
-              Create Liquidity
-            </button>
-          </Link>
+          <div className=" flex-col hidden pt-2 md:block lg:items-start text-center max-w-xs z-20 
+                           md:text-left md:absolute md:left-[12%] md:top-[55%]
+                           lg:text-left lg:absolute lg:left-[13%] lg:top-[65%]
+                           xl:text-left xl:absolute xl:left-[8%] xl:top-[70%]
+                           2xl:text-left 2xl:absolute 2xl:left-[13%] 2xl:top-[65%]"
+                           >
+
+
+            <p className="text-sm md:text-base font-semibold text-white mb-6">
+              Launch Tokens & Create Liquidity Pools effortlessly!
+              <br />
+              No coding required. 
+            </p>
+            
+            <div className="inline-flex sm:flex-row gap-3 w-full sm:w-auto">
+              <button 
+                onClick={() => {}} 
+                className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
+              >
+                Create Token
+              </button>
+              <button 
+                onClick={() => {}} 
+                className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
+              >
+                Create Liquidity
+              </button>
+            </div>
+          </div>
+
         </div>
+
+        <div className=" flex-col block md:hidden items-center lg:items-start text-center max-w-xs z-20">
+            <p className="text-sm md:text-base text-white mb-6">
+              Launch Tokens & Create Liquidity Pools effortlessly!
+              <br />
+              No coding required.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <button 
+                onClick={() => {}} 
+                className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
+              >
+                Create Token
+              </button>
+              <button 
+                onClick={() => {}} 
+                className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
+              >
+                Create Liquidity
+              </button>
+            </div>
+          </div>
+      
+
+        
       </div>
     </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 text-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24 text-center">
         <h2 className="text-white font-semibold uppercase text-4xl sm:text-5xl tracking-wider">
           Our Numbers
         </h2>
