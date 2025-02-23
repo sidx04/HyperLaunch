@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router";
 
+
+
 const Hero = () => {
   return (
+
     <div className="sm:pt-10 bg-black text-white relative">
     <div className="min-h-screen bg-black relative overflow-hidden">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center h-screen">
@@ -34,18 +37,23 @@ const Hero = () => {
             </p>
             
             <div className="inline-flex sm:flex-row gap-3 w-full sm:w-auto">
+              <Link to='/createToken'>
               <button 
                 onClick={() => {}} 
                 className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
               >
                 Create Token
               </button>
+              </Link>
+
+              <Link to='/createLiquidity'>
               <button 
                 onClick={() => {}} 
                 className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
               >
                 Create Liquidity
               </button>
+              </Link>
             </div>
           </div>
 
@@ -59,18 +67,22 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <Link to='/createToken'>
               <button 
                 onClick={() => {}} 
                 className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
               >
                 Create Token
               </button>
+              </Link>
+              <Link to='/createLiquidity'>
               <button 
                 onClick={() => {}} 
                 className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
               >
                 Create Liquidity
               </button>
+              </Link>
             </div>
           </div>
       
