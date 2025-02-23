@@ -14,11 +14,11 @@ const Hero = () => {
         <img
           src="./hyprlaunch.svg"
           alt="HyprLaunch Logo"
-          className="w-48 sm:w-64 md:w-80 lg:w-96 opacity-85"
+          className="w-48 sm:w-64 md:w-80 lg:w-96 opacity-65"
         />
       </div>
 
-      <div className="absolute top-[65%] sm:top-[70%] left-1/2 transform -translate-x-1/2 text-center sm:text-left max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl w-full px-4 sm:px-0">
+      <div className="absolute top-[50%] sm:top-[45%] sm:left-[40%] left-1/2 transform -translate-x-1/2 text-center sm:text-left max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl w-full px-4 sm:px-0">
         <p className="text-sm sm:text-base md:text-lg font-normal leading-snug text-white">
           Launch Tokens & Create Liquidity Pools effortlessly! <br /> No coding required.
         </p>
