@@ -1,5 +1,4 @@
 import './App.css'
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router'
@@ -22,7 +21,6 @@ function App() {
         <Route path="/createLiquidity" element={<Liquidity />} />
         <Route path="/manageLiquidity" element={<Manage />} />
      </Routes>
-     <SpeedInsights/>
      <FAQ />
      <Footer />
     </>
