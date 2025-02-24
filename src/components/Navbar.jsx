@@ -21,37 +21,38 @@ const NavBar = () => {
 
   return (
     <nav className='z-100 bg-black text-white fixed top-0 right-0 left-0 border-b border-[#5c5c5c]'>
-      <div className='container mx-auto px-4 py-2 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center h-16'>
+      <div className='px-4 py-2 sm:px-6 lg:px-8'>
+        <div className='flex h-14 items-center justify-between gap-8 px-4 sm:px-6'>
 
 
 
           {/* logo */}
           <div>
-            <Link to="/" onClick={scrollToTop} className="flex items-center text-xl font-bold">
+            <a href="/" onClick={scrollToTop} className="shrink-0 flex items-center text-xl font-bold">
               <img className='w-10 h-10' src="./hyprlaunch.svg" alt="HyprLaunch" />
               <span className="ml-3">HyprLaunch</span>
-            </Link>
+            </a>
           </div>
 
 
 
 
           {/* menu */}
-          <div className='hidden mx-8 lg:flex space-x-3 justify-start items-center gap-20 font-semibold'>
-          <Link onClick={scrollToTop} to="/" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Home</span></Link>
-            <Link onClick={scrollToTop} to="/createToken" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer'><span>Create Token</span></Link>
-            <Link onClick={scrollToTop} to="/createLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Liquidity Pool</span></Link>
-            <Link onClick={scrollToTop} to="/manageLiquidity" className='hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer' ><span>Manage Liquidity</span></Link>
+          <div className='mx-5 font-semibold flex items-center gap-6 max-md:hidden lg:gap-8 xl:gap-12 2xl:gap-16'>
+          <Link onClick={scrollToTop} to="/" className='hover:text-gray-500 font-bold transition-all duration-300 active:scale-95 cursor-pointer'><span>Home</span></Link>
+            <Link onClick={scrollToTop} to="/createToken" className='hover:text-gray-500 font-bold transition-all duration-300 active:scale-95 cursor-pointer'><span>Create Token</span></Link>
+            <Link onClick={scrollToTop} to="/createLiquidity" className='hover:text-gray-500 font-bold transition-all duration-300 active:scale-95 cursor-pointer' ><span>Liquidity Pool</span></Link>
+            <Link onClick={scrollToTop} to="/manageLiquidity" className='hover:text-gray-500 font-bold transition-all duration-300 active:scale-95 cursor-pointer' ><span>Manage Liquidity</span></Link>
           </div>
 
 
 
 
           {/* connect button */}
-          <div className='hidden md:flex items-center space-x-4'>
+          <div className='font-semibold flex items-center max-md:hidden'>
             <button>
-              <div className="px-6 py-3 bg-[#232323] rounded-full border border-[#5c5c5c] flex items-center justify-center gap-2.5 transition-all duration-300 hover:bg-[#2e2e2e] active:scale-95 cursor-pointer">
+              <div className="px-6 py-2 bg-[#232323] rounded-full border border-[#5c5c5c] flex items-center justify-center gap-2.5 
+                              transition-all duration-300 hover:bg-[#2e2e2e] active:scale-95 cursor-pointer">
                 <div className="text-white font-bold ">Connect Wallet</div>
               </div>
             </button>
@@ -61,8 +62,8 @@ const NavBar = () => {
 
 
           {/* mobile menu toggle */}
-          <div className='md:hidden'>
-            <button onClick={toggleMenu} className='inline-flex items-center rounded-lg transition-all duration-300 justify-center p-3 focus:outline-none active:scale-95  hover:text-gray-500 hover:bg-gray-700'>
+          <div className='md:hidden flex items-center justify-self-end'>
+            <button onClick={toggleMenu} className='rounded-lg transition-all duration-300 p-3 focus:outline-none active:scale-95  hover:text-gray-500 hover:bg-gray-700'>
               {
                 !isMenuOpen ? (<MdMenu className='block w-6 h-6'/>) : (<MdClose className='block w-6 h-6'/>)
               }
