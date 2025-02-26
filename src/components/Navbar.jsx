@@ -22,7 +22,7 @@ const NavBar = () => {
 
         console.log("Connected Wallet Address:", publicKey);
 
-        const res = await fetch(`${process.env.BACKEND_URI}/connect-wallet`, {
+        const res = await fetch(`http://localhost:8080/connect-wallet`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ publicKey }),
