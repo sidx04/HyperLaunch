@@ -13,7 +13,7 @@ const Create = () => {
     description: "",
     checkFreeze: false,
     checkMint: false,
-    checkRevoke: false,
+    checkUpdate: false,
     publicKey: "",
   });
 
@@ -49,7 +49,12 @@ const Create = () => {
       const txResponse = await fetch("http://localhost:8080/create-token-tx", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ publicKey: pubKey }),
+        body: JSON.stringify({
+          publicKey: pubKey,
+          checkFreeze: formData.checkFreeze,
+          checkMint: formData.checkMint,
+          checkUpdate: formData.checkUpdate,
+        }),
       });
 
       const txData = await txResponse.json();
@@ -100,6 +105,7 @@ const Create = () => {
       console.error("Error submitting form:", error);
     }
   };
+
   return (
     <div className="pt-28 bg-black text-white relative font-['Product Sans']">
       <form
@@ -203,8 +209,8 @@ const Create = () => {
         <label>
           <input
             type="checkbox"
-            name="checkRevoke"
-            checked={formData.checkRevoke}
+            name="checkUpdate"
+            checked={formData.checkUpdate}
             onChange={handleChange}
             className="mr-2"
           />{" "}
