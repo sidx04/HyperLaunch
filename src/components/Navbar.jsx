@@ -77,14 +77,14 @@ const NavBar = () => {
             </Link>
             <Link
               onClick={scrollToTop}
-              to="/createLiquidity"
+              to="https://raydium.io/liquidity/create-pool/?tab=standard"
               className="hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               <span>Liquidity Pool</span>
             </Link>
             <Link
               onClick={scrollToTop}
-              to="/manageLiquidity"
+              to="https://raydium.io/portfolio/?position_tab=standard"
               className="hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               <span>Manage Liquidity</span>
@@ -143,13 +143,13 @@ const NavBar = () => {
               Create Token
             </Link>
             <Link
-              to="/createLiquidity"
+              to="https://raydium.io/liquidity/create-pool/?tab=standard"
               className="block px-3 py-2 hover:bg-gray-700 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               Liquidity Pool
             </Link>
             <Link
-              to="/manageLiquidity"
+              to="https://raydium.io/portfolio/?position_tab=standard"
               className="block px-3 py-2 hover:bg-gray-700 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               Manage Liquidity

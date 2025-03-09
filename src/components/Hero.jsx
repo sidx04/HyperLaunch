@@ -46,7 +46,7 @@ const Hero = () => {
               </button>
               </Link>
 
-              <Link to='/createLiquidity'>
+              <Link to='/https://raydium.io/liquidity/create-pool/?tab=standard'>
               <button 
                 onClick={() => {}} 
                 className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
@@ -75,7 +75,7 @@ const Hero = () => {
                 Create Token
               </button>
               </Link>
-              <Link to='/createLiquidity'>
+              <Link to='/https://raydium.io/liquidity/create-pool/?tab=standard'>
               <button 
                 onClick={() => {}} 
                 className="w-full sm:w-auto px-4 py-2 rounded-full bg-[#232323] border border-[#5c5c5c] hover:bg-[#2e2e2e] transition-all duration-300 active:scale-95 text-white text-sm font-bold"
