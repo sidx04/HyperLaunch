@@ -15,6 +15,9 @@ const Create = () => {
     checkMint: false,
     checkUpdate: false,
     publicKey: "",
+    twitterURL: "",
+    telegramURL: "",
+    websiteURL: "",
   });
 
 
@@ -149,15 +152,35 @@ const Create = () => {
 
                 <div className="flex flex-col">
                   <label className="text-lg">Twitter or X Link</label>
-                  <input type="text" placeholder="Twitter URL" className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
+                  <input 
+                    type="text" 
+                    placeholder="Twitter URL" 
+                    name="twitterURL" 
+                    value={formData.twitterURL} 
+                    onChange={handleChange}
+                    className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
                 </div>
+
                 <div className="flex flex-col">
                   <label className="text-lg">Telegram Link</label>
-                  <input type="text" placeholder="Telegram URL" className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
+                  <input 
+                    type="text" 
+                    placeholder="Telegram URL" 
+                    name="telegramURL"
+                    value={formData.telegramURL}
+                    onChange={handleChange}
+                    className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
                 </div>
+
                 <div className="flex flex-col">
                   <label className="text-lg">Website Link</label>
-                  <input type="text" placeholder="Website URL" className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
+                  <input 
+                    type="text" 
+                    placeholder="Website URL" 
+                    name="websiteURL"
+                    value={formData.websiteURL}
+                    onChange={handleChange}
+                    className="p-3 border border-[#7d7d7d] rounded-md bg-[#232323] mt-2" />
                 </div>
               </div>
             </div>
