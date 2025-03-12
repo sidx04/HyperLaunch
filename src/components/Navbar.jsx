@@ -22,11 +22,14 @@ const NavBar = () => {
 
         console.log("Connected Wallet Address:", publicKey);
 
-        const res = await fetch(`http://localhost:8080/connect-wallet`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ publicKey }),
-        });
+        const res = await fetch(
+          `${import.meta.env.VITE_BACKEND_URI}/connect-wallet`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ publicKey }),
+          }
+        );
 
         if (res.ok) {
           setRedirectUrl("/");

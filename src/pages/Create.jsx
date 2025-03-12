@@ -49,16 +49,19 @@ const Create = () => {
       const pubKey = wallet.publicKey.toString();
 
       // Step 1: Request the transaction from the backend
-      const txResponse = await fetch("http://localhost:8080/create-token-tx", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          publicKey: pubKey,
-          checkFreeze: formData.checkFreeze,
-          checkMint: formData.checkMint,
-          checkUpdate: formData.checkUpdate,
-        }),
-      });
+      const txResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URI}/create-token-tx`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            publicKey: pubKey,
+            checkFreeze: formData.checkFreeze,
+            checkMint: formData.checkMint,
+            checkUpdate: formData.checkUpdate,
+          }),
+        }
+      );
 
       const txData = await txResponse.json();
       if (!txData.transaction) throw new Error("Invalid transaction data");
@@ -91,10 +94,13 @@ const Create = () => {
       );
 
       // Step 4: Send the form data and signed transaction to the backend
-      const finalResponse = await fetch("http://localhost:8080/create-token", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const finalResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URI}/create-token`,
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
 
       const result = await finalResponse.json();
       console.log("Server Response:", result);
