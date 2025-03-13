@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 import { Buffer } from "buffer";
 import { Connection, Transaction } from "@solana/web3.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Create = () => {
   const [formData, setFormData] = useState({
@@ -39,16 +41,14 @@ const Create = () => {
     event.preventDefault();
 
     if (!window.solana || !window.solana.isPhantom) {
-      console.error("Phantom Wallet is not installed!");
+      toast.error("Phantom Wallet is not installed!");
       return;
     }
 
     try {
-      // Connect to Phantom Wallet
       const wallet = await window.solana.connect();
       const pubKey = wallet.publicKey.toString();
 
-      // Step 1: Request the transaction from the backend
       const txResponse = await fetch(
         `${import.meta.env.VITE_BACKEND_URI}/create-token-tx`,
         {
@@ -66,14 +66,12 @@ const Create = () => {
       const txData = await txResponse.json();
       if (!txData.transaction) throw new Error("Invalid transaction data");
 
-      // Step 2: Deserialize and sign the transaction
       const transactionBuffer = Buffer.from(txData.transaction, "base64");
       const transaction = Transaction.from(transactionBuffer);
       const signedTransaction = await window.solana.signTransaction(
         transaction
       );
 
-      // Step 3: Prepare form data
       const formDataToSend = new FormData();
       Object.keys(formData).forEach((key) => {
         if (formData[key] !== null) {
@@ -87,13 +85,11 @@ const Create = () => {
         }
       });
 
-      // Add the user's public key and signed transaction to the form data
       formDataToSend.append(
         "signedTransaction",
         signedTransaction.serialize().toString("base64")
       );
-
-      // Step 4: Send the form data and signed transaction to the backend
+      toast.loading("Please wait while we create your token...");
       const finalResponse = await fetch(
         `${import.meta.env.VITE_BACKEND_URI}/create-token`,
         {
@@ -103,20 +99,21 @@ const Create = () => {
       );
 
       const result = await finalResponse.json();
-      console.log("Server Response:", result);
+      toast.dismiss();
 
       if (finalResponse.ok) {
-        console.log("Token creation successful!");
+        toast.success("Token creation successful!");
       } else {
-        console.error("Token creation failed:", result.error);
+        toast.error(`Token creation failed: ${result.error}`);
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      toast.error(`Error: ${error.message}`);
     }
   };
 
   return (
     <div className="pt-28 pb-20 bg-black text-white relative font-['Product Sans']">
+      <ToastContainer position="top-right" autoClose={5000} />
       <form
         onSubmit={handleSubmit}
         className="flex flex-col rounded-[30px] bg-[#23232333] border border-[#343434] text-white p-8 w-auto xl:mx-auto max-w-6xl mx-3 relative"
