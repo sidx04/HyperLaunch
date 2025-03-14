@@ -80,12 +80,14 @@ const NavBar = () => {
             </Link>
             <Link
               onClick={scrollToTop}
+              target="_blank"
               to="https://raydium.io/liquidity/create-pool/?tab=standard"
               className="hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               <span>Liquidity Pool</span>
             </Link>
             <Link
+              target="_blank"
               onClick={scrollToTop}
               to="https://raydium.io/portfolio/?position_tab=standard"
               className="hover:text-gray-500 transition-all duration-300 active:scale-95 cursor-pointer"
@@ -99,7 +101,7 @@ const NavBar = () => {
             {redirectUrl ? (
               <Link to={redirectUrl}>
                 <div className="px-6 py-3 bg-[#232323] rounded-full border border-[#5c5c5c] flex items-center justify-center gap-2.5 transition-all duration-300 hover:bg-[#2e2e2e] active:scale-95 cursor-pointer">
-                  <div className="text-white font-bold">Dashboard</div>
+                  <div className="text-white font-bold">Connected</div>
                 </div>
               </Link>
             ) : (
@@ -146,12 +148,14 @@ const NavBar = () => {
               Create Token
             </Link>
             <Link
+              target="_blank"
               to="https://raydium.io/liquidity/create-pool/?tab=standard"
               className="block px-3 py-2 hover:bg-gray-700 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               Liquidity Pool
             </Link>
             <Link
+              target="_blank"
               to="https://raydium.io/portfolio/?position_tab=standard"
               className="block px-3 py-2 hover:bg-gray-700 transition-all duration-300 active:scale-95 cursor-pointer"
             >
@@ -160,7 +164,7 @@ const NavBar = () => {
             {redirectUrl ? (
               <Link to={redirectUrl}>
                 <div className="px-4 py-1.5 bg-[#232323] rounded-full border border-[#5c5c5c] flex items-center justify-center gap-2.5 transition-all duration-300 hover:bg-[#2e2e2e] active:scale-95 cursor-pointer">
-                  <div className="text-white font-bold">Dashboard</div>
+                  <div className="text-white font-bold">Connected</div>
                 </div>
               </Link>
             ) : (

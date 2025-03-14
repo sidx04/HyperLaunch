@@ -43,7 +43,7 @@ export function FAQ() {
 
   return (
     <section id="faq" className="bg-black pb-10 px-6">
-      <h2 className="text-5xl font-bold text-center text-white font-['Roboto'] mb-10">
+      <h2 className="pt-10 text-5xl font-semibold text-center text-white font-['Product Sans'] mb-10">
         Frequently Asked Questions
       </h2>
       <div className="max-w-screen mx-auto space-y-4">
